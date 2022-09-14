@@ -1,9 +1,9 @@
 public class Mutex {
 
-    boolean flag = true;
+    private boolean flag = true;
 
     public synchronized boolean acquire() {
-        if (flag == true) {
+        if (flag) {
             flag = false;
             return true;
         }
